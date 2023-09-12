@@ -77,7 +77,15 @@ stack build
 ```
 
 #### VSCode
-TBD
+Install extension [DevContainers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+
+Copy directory [.devcontainer](.devcontainer/) to your Haskell project's root directory. 
+Change the docker image tag in [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) as you see fit.
+
+Bring up Command palette, and run `Dev Containers: Open Folder in Container`.
+
+Now you can build the project in VSCode's terminal using either `cabal` or `stack`.
+
 
 ## How to add tools that I need?
 If you need tools that are not provided by the container, 
