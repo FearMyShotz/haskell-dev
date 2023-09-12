@@ -10,4 +10,4 @@ docker build \
   --build-arg INSTALL_STACK=${BOOTSTRAP_HASKELL_INSTALL_STACK} \
   --build-arg INSTALL_HLS=${BOOTSTRAP_HASKELL_INSTALL_HLS} \
   --build-arg ADJUST_BASHRC=${BOOTSTRAP_HASKELL_ADJUST_BASHRC} \
-  -t my-haskell-dev-container:latest .
+  -t haskell-dev-container:latest .
