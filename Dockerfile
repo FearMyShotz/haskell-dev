@@ -23,7 +23,7 @@ RUN apt install -y build-essential libffi-dev libffi8ubuntu1 libgmp-dev libgmp10
 
 # Install Haskell
 RUN mkdir /install
-COPY ./install_haskell.sh /install/install_haskell.sh
+COPY scripts/install_haskell.sh /install/install_haskell.sh
 WORKDIR /install
 RUN ./install_haskell.sh
 
