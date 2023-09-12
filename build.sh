@@ -3,10 +3,10 @@
 source install_haskell.env
 
 docker build \
-  --build-arg GHC_VERSION=9.2.8 \
-  --build-arg CABAL_VERSION=latest \
-  --build-arg INSTALL_STACK=1 \
-  --build-arg INSTALL_CABAL=1 \
-  --build-arg INSTALL_HLS=1 \
-  --build-arg ADJUST_BASHRC=P \
+  --build-arg NONINTERACTIVE=${BOOTSTRAP_HASKELL_NONINTERACTIVE} \
+  --build-arg GHC_VERSION=${BOOTSTRAP_HASKELL_GHC_VERSION} \
+  --build-arg CABAL_VERSION=${BOOTSTRAP_HASKELL_CABAL_VERSION} \
+  --build-arg INSTALL_STACK=${BOOTSTRAP_HASKELL_INSTALL_STACK} \
+  --build-arg INSTALL_HLS=${BOOTSTRAP_HASKELL_INSTALL_HLS} \
+  --build-arg ADJUST_BASHRC=${BOOTSTRAP_HASKELL_ADJUST_BASHRC} \
   -t my-haskell-dev-container:latest .
