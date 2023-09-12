@@ -27,4 +27,4 @@ COPY scripts/install_haskell.sh /install/install_haskell.sh
 WORKDIR /install
 RUN ./install_haskell.sh
 
-CMD /bin/bash
+CMD sleep infinity
