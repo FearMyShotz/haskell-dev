@@ -16,7 +16,7 @@ Tools included in containser:
 ## How to get the container image
 
 ### Get a prebuilt image
-I have some prebuilt images uploaded to [DockerHub](https://hub.docker.com/repository/docker/bjing/haskell-dev-container/general).
+I have some prebuilt images uploaded to [DockerHub](https://hub.docker.com/r/bjing/haskell-dev-container).
 
 Decide what ghc version you want, and pull it down by running:
 
@@ -46,7 +46,7 @@ This will generate a docker image `haskell-dev-container:latest`.
 
 
 ## How to use the image
-Here I assume you're using a [prebuilt docker image on DockerHub](https://hub.docker.com/repository/docker/bjing/haskell-dev-container/general).
+Here I assume you're using a [prebuilt docker image on DockerHub](https://hub.docker.com/r/bjing/haskell-dev-container).
 
 #### Command line
 Go to the Haskell project you're working on in the terminal:
