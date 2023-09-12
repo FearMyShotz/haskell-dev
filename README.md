@@ -10,7 +10,7 @@ Tools included in containser:
 * stack (ghcup recommended version)
 * haskell language server (ghcup recommended version)
 * git and scm_breeze
-* vim
+* Vim (with optional [Vim IDE setup script](#setup-haskell-ide-in-vim))
 
 
 ## How to get the container image
@@ -48,7 +48,7 @@ This will generate a docker image `haskell-dev-container:latest`.
 ## How to use the image
 Here I assume you're using a [prebuilt docker image on DockerHub](https://hub.docker.com/repository/docker/bjing/haskell-dev-container/general).
 
-### Command line
+#### Command line
 Go to the Haskell project you're working on in the terminal:
 
 ```sh
@@ -76,7 +76,7 @@ For example:
 stack build
 ```
 
-### VSCode
+#### VSCode
 TBD
 
 ## How to add tools that I need?
@@ -89,3 +89,14 @@ sudo apt install <package_name>
 
 Since the container user `code` has sudo privilege, you can
 install any tools you want.
+
+## Extras
+#### Setup Haskell IDE in vim
+
+The container image provides setup script for VIM Haskell IDE.
+
+Simply run the setup script in /home/code/install:
+```sh
+cd ~/install
+./setup_vim.sh
+```
