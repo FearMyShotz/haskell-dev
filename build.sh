@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source install_haskell.env
+source scripts/install_haskell.env
 
 docker build \
   --build-arg MINIMAL_INSTALL=${BOOTSTRAP_HASKELL_MINIMAL} \
