@@ -46,14 +46,21 @@ RUN groupadd --gid $USER_GID $USERNAME \
 # Set the default user. Omit if you want to keep the default as root.
 USER $USERNAME
 
+
 #######################
 # Install Haskell
 #######################
-
 RUN mkdir $USER_HOME/install/
 COPY scripts/install_haskell.sh $USER_HOME/install/install_haskell.sh
 WORKDIR $USER_HOME/install/
 RUN ./install_haskell.sh
+
+
+#######################
+# Install other tools
+#######################
+RUN git clone https://github.com/scmbreeze/scm_breeze.git ~/.scm_breeze
+RUN ~/.scm_breeze/install.sh
 
 RUN mkdir $USER_HOME/app
 WORKDIR $USER_HOME/app
