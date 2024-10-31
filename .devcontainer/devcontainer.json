@@ -1,6 +1,9 @@
 {
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": "."
+  },
   "name": "Haskell",
-  "image": "bjing/haskell-dev-container:ghc-9.2.8",
   // Configure tool-specific properties.
   "customizations": {
     // Configure properties specific to VS Code.
