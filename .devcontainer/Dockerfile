@@ -14,7 +14,7 @@ ENV BOOTSTRAP_HASKELL_ADJUST_BASHRC=P
 #######################
 USER root
 RUN apt-get update
-RUN apt-get install -y build-essential libffi-dev libffi8ubuntu1 libgmp-dev libgmp10 libncurses-dev libncurses6 libtinfo6
+RUN apt-get install -y build-essential curl libffi-dev libffi8 libgmp-dev libgmp10 libncurses-dev libncurses6 libtinfo6 pkg-config
 
 
 #######################
